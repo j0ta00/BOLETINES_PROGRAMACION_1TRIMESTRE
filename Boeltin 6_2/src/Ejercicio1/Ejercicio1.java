@@ -6,9 +6,9 @@ package Ejercicio1;
  *	Inicio
  *	entero resultado <--Declaración de la variable resultado que será la salida de la función
  * 	SI (n == 0) <-- Caso Base y apertura de un si
- *	resultado = 0  <-- En caso de que n valga 0, la función nos va a devolver 0 ya que resultado pasará a valer 0
+ *		resultado = 0  <-- En caso de que n valga 0, la función nos va a devolver 0 ya que resultado pasará a valer 0
  *	EN OTRO CASO
- *	resultado = n + funcion(n-1)  <-- (Asignamos a resultado el valor de n + la llamada recursiva al propio método solo que esta vez n valdrá menos
+ *		resultado = n + funcion(n-1)  <-- (Asignamos a resultado el valor de n + la llamada recursiva al propio método solo que esta vez n valdrá menos
  *	FINSI	<--Cierre del si							de esta forma se va reduciendo el valor de n por lo que este se trata del caso general ya que se irá llamando cada
  *										vez a "versiones menores" de la función hasta lleagr al caso base)
  *	Devolver (resultado) <-- return de resultado es decir la salida de la función será el valor del entero resultado
@@ -27,9 +27,9 @@ package Ejercicio1;
  *	Inicio
  *	entero resultado <--Declaración de la variable resultado que será la salida de la función
  * 	SI (n == 0) <-- Caso Base y apertura de un si
- *	resultado = 0  <-- En caso de que el parámetro introducido valga 0, la función nos va a devolver 0 ya que resultado pasará a valer 0, en la primera llamada es obvio que no se cumplirá ya que vale 5 pero si en la última
+ *		resultado = 0  <-- En caso de que el parámetro introducido valga 0, la función nos va a devolver 0 ya que resultado pasará a valer 0, en la primera llamada es obvio que no se cumplirá ya que vale 5 pero si en la última
  *	EN OTRO CASO
- *	resultado = 5 + funcion(5-1)<--Caso General
+ *		resultado = 5 + funcion(5-1)<--Caso General
  *
  * 1ª Llamada resultado = 5+10 = 15 <--Devuelve
  * 2ª Llamada resultado = 4+6 = 10 <--Devuelve
@@ -49,9 +49,9 @@ package Ejercicio1;
  *	Inicio
  *	entero resultado <--Declaración de la variable resultado que será la salida de la función
  * 	SI (n == 0) <-- Caso Base y apertura de un si
- *	resultado = 0  <-- En caso de que el parámetro introducido valga 0, como vemos no vale 0 ni nunca va a llegar a 0 esto se debe a un error de diseño bastaría con cambiar "==" por "<="
+ *		resultado = 0  <-- En caso de que el parámetro introducido valga 0, como vemos no vale 0 ni nunca va a llegar a 0 esto se debe a un error de diseño bastaría con cambiar "==" por "<="
  *	EN OTRO CASO
- *	resultado = -6 + funcion(-6-1)<--Caso General
+ *		resultado = -6 + funcion(-6-1)<--Caso General
  *  *DARÍAN LLAMDAS INFINITAS Y NOS ARROJARÍA UNA EXCEPCIÓN*
  *  FINSI								
  *	Devolver (resultado) <-- return de resultado es decir la salida de la función será el valor del entero resultado 
@@ -65,9 +65,9 @@ package Ejercicio1;
  *	Inicio
  *	entero resultado <--Declaración de la variable resultado que será la salida de la función
  * 	SI (n == 0) <-- Caso Base y apertura de un si
- *	resultado = 0  <-- En caso de que el parámetro introducido valga 0, que como vemos no vale 0, se le asignaría a resultado el valor 0 
+ *		resultado = 0  <-- En caso de que el parámetro introducido valga 0, que como vemos no vale 0, se le asignaría a resultado el valor 0 
  *	EN OTRO CASO
- *	resultado = 1 + funcion(1-1)
+ *		resultado = 1 + funcion(1-1)
  *  1ºLlamada 1+(0)
  *  2ªLlamada return devolver=0
  *  FINSI								
@@ -84,12 +84,10 @@ package Ejercicio1;
  * Funcion entera estatica pública(entero numero)
  * Variables:Entero resultado
  * Inicio
- * Para(entero indice = 0; indice!=numero; indice++ )
- * resultado=resultado+(numero-indice)
- * FIN_Para
- * SI
- * resultado=0
- * Fin_SI
+ * 	Para(entero indice = 0; indice!=numero; indice++ )
+ * 	resultado=resultado+(numero-indice)
+ *  FIN_Para
+ *Fin del programa
  * */
 
 public class Ejercicio1 {
@@ -101,15 +99,11 @@ public class Ejercicio1 {
 	}
 	
 	public static int funcion(int numero){
+		//Declaración de variables locales
 		int resultado=numero;
-		for(int i=1;i!=numero;i++){
+		for(int i=1;i<numero;i++){
 			
 			resultado+=(numero-i);
-			
-		}
-		if(resultado<0){
-			
-			resultado=0;
 			
 		}
 		
